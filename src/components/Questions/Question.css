@@ -1,0 +1,11 @@
+.qus-container {
+    border: 2px solid brown;
+    margin: 20px;
+    gap: 20px;
+
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}

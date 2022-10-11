@@ -1,5 +1,8 @@
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './Question.css'
+import { EyeSlashIcon } from '@heroicons/react/24/solid'
+
 
 const Question = ({ qus, val }) => {
     const { question, options, correctAnswer } = qus
@@ -12,19 +15,22 @@ const Question = ({ qus, val }) => {
         }
 
     };
-
+    const rightAns = (correctAnswer) => toast(correctAnswer);
 
     return (
-        <div>
-            <h2>Quiz  { }: {question}</h2>
-            <div>
-                <button >{correctAnswer}</button>
-
+        <div className='quiz-container'>
+            <div className='question'>
+                <h2>{question}</h2>
+                <div className='icon'>
+                    <EyeSlashIcon onClick={() => rightAns(correctAnswer)} />
+                </div>
             </div>
-            {
-                options.map((option, index) => <button onClick={(e) => notify(e.target.innerText)} key={index}>{option}</button>)
-
-            }
+            <div className='options'>
+                {
+                    options.map((option, index) => <button onClick={(e) => { notify(e.target.innerText) }} key={index}>{option}</button>)
+                    // e.currentTarget.setAttribute("disabled", true)
+                }
+            </div>
         </div >
     );
 };

@@ -9,10 +9,10 @@ const Tpoic = ({ topic }) => {
             <div>
                 <img src={logo} alt="" />
                 <div className='text'>
-                    <h1>{name}</h1>
+                    <h4><small>{name}</small></h4>
                     <p><small>Total Quiz: {total}</small></p>
                 </div>
-                <Link to={`../home/${id}`}>Take Quiz</Link>
+                <Link className='quiz-btn' to={`../home/${id}`}>Perform Quiz</Link>
             </div>
         </div>
     );

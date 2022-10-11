@@ -7,7 +7,11 @@ const Home = () => {
     const topics = useLoaderData().data;
     return (
         <div>
-            <h2>Welcome Home</h2>
+            <div className='header-container'>
+                <div className='header-title'>
+                    <h1 className='details'>It Matters how you eveolve. Solve much Quiz and become one of the Topper</h1>
+                </div>
+            </div>
             <div className='home-container'>
                 {
                     topics.map(topic => <Topic
