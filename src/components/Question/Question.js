@@ -5,13 +5,16 @@ import { EyeSlashIcon } from '@heroicons/react/24/solid'
 
 
 const Question = ({ qus, val }) => {
+
     const { question, options, correctAnswer } = qus
     const notify = (ans) => {
         if (JSON.stringify(ans) === JSON.stringify(correctAnswer)) {
-            toast("Right Ans")
+            toast("Right Ans");
+            // setValue(value + 1);
         }
         else {
-            toast("Wrong Ans")
+            toast("Wrong Ans");
+
         }
 
     };

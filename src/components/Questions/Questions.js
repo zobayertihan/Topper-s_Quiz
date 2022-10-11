@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 import './Question.css'
@@ -7,8 +7,7 @@ import './Question.css'
 const Questions = () => {
     const questions = useLoaderData();
     const { name } = questions.data;
-    const ra = 0;
-    const wa = 0;
+    // const [value, setValue] = useState(0);
     // console.log(questions)
     const val = questions.length
     return (
@@ -23,6 +22,7 @@ const Questions = () => {
                             key={qus.id}
                             qus={qus}
                             val={val}
+
                         ></Question>)
                     }
                 </div>

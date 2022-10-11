@@ -1,0 +1,10 @@
+.blog-container {
+    padding: 10px;
+    margin: 50px;
+}
+
+.blogs {
+    border: 2px solid palegoldenrod;
+    border-radius: 10px;
+    margin: 10px;
+}
