@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
-import './Question.css'
+import './Questions.css'
 
 
 const Questions = () => {
