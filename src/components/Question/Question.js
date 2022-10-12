@@ -4,16 +4,17 @@ import './Question.css'
 import { EyeSlashIcon } from '@heroicons/react/24/solid'
 
 
-const Question = ({ qus, val }) => {
+const Question = ({ qus, val, posvalue, negvalue, setnegValue, setposValue }) => {
 
     const { question, options, correctAnswer } = qus
     const notify = (ans) => {
         if (JSON.stringify(ans) === JSON.stringify(correctAnswer)) {
             toast("Right Ans");
-            // setValue(value + 1);
+            setposValue(posvalue + 1);
         }
         else {
             toast("Wrong Ans");
+            setnegValue(negvalue < 0 ? 0 : negvalue + 1)
 
         }
 

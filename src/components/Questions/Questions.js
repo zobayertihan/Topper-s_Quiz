@@ -7,7 +7,8 @@ import './Questions.css'
 const Questions = () => {
     const questions = useLoaderData();
     const { name } = questions.data;
-    // const [value, setValue] = useState(0);
+    const [posvalue, setposValue] = useState(0);
+    const [negvalue, setnegValue] = useState(0);
     // console.log(questions)
     const val = questions.length
     return (
@@ -22,14 +23,17 @@ const Questions = () => {
                             key={qus.id}
                             qus={qus}
                             val={val}
-
+                            posvalue={posvalue}
+                            setposValue={setposValue}
+                            negvalue={negvalue}
+                            setnegValue={setnegValue}
                         ></Question>)
                     }
                 </div>
                 <div>
                     <h1>Result Board</h1>
-                    <h3>Right answers: { }</h3>
-                    <h3>Wrong answers: { }</h3>
+                    <h3>Right answers: {posvalue}</h3>
+                    <h3>Wrong answers: {negvalue}</h3>
                 </div>
             </div>
         </div>
