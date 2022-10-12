@@ -6,7 +6,7 @@ import img from '../quiz0.0.png'
 const Header = () => {
     return (
         <div>
-            <nav className='nav-contaisner'>
+            <nav className='nav-container'>
                 <div className='title-container'>
                     <img src={img} alt="" />
                     <h1>Topper's Quiz</h1>

@@ -8,7 +8,10 @@ const Question = ({ qus, val, posvalue, negvalue, setnegValue, setposValue }) =>
 
     const { question, options, correctAnswer } = qus
     const notify = (ans) => {
-        if (JSON.stringify(ans) === JSON.stringify(correctAnswer)) {
+        let correct = JSON.stringify(correctAnswer)
+        let answer = JSON.stringify(ans)
+        correct = correct.replace(/\s+/g, ' ').trim();
+        if (correct === answer) {
             toast("Right Ans");
             setposValue(posvalue + 1);
         }
